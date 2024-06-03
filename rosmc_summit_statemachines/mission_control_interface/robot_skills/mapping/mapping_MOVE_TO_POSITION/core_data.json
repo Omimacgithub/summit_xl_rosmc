@@ -88,14 +88,6 @@
             "from_state": "QNTYGG", 
             "to_key": 9, 
             "to_state": "YMVLQT"
-        }, 
-        "14": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
-            "data_flow_id": 14, 
-            "from_key": 19, 
-            "from_state": "QNTYGG", 
-            "to_key": 0, 
-            "to_state": "YMVLQT"
         }
     }, 
     "description": null, 

@@ -1,0 +1,87 @@
+# Assign TASK int_marker to 'group' whose mode is 'build_up'
+move_to_poi:
+  - name: pus
+    type: TASK
+    topics:
+      - interactive_markers_2d_pose
+    members:  # this element is required iif name is from 'group' whose mode is 'build_up'
+      - name: x_pos
+        value: INT_MARKER.pose.position.x
+      - name: y_pos
+        value: INT_MARKER.pose.position.y
+      - name: z_pos
+        value: INT_MARKER.pose.position.z
+      - name: x_ori
+        value: INT_MARKER.pose.orientation.x
+      - name: y_ori
+        value: INT_MARKER.pose.orientation.y
+      - name: z_ori
+        value: INT_MARKER.pose.orientation.z
+      - name: w_ori
+        value: INT_MARKER.pose.orientation.w
+    # Following elements are required iif type == TASK and mode is not 'break_down'
+    service_type_for_addition: AddTaskMarker
+    service_topic_for_addition: interactive_markers_2d_pose  # This must be one of 'topics'
+    service_req_attr: pose
+    service_req_value: INT_MARKER.pose
+
+acsion:
+  - name: dicto
+    type: TASK
+    topics:
+      - interactive_markers_2d_pose
+    members:  # this element is required iif name is from 'group' whose mode is 'build_up'
+      - name: x_pos
+        value: INT_MARKER.pose.position.x
+      - name: y_pos
+        value: INT_MARKER.pose.position.y
+      - name: z_pos
+        value: INT_MARKER.pose.position.z
+      - name: x_ori
+        value: INT_MARKER.pose.orientation.x
+      - name: y_ori
+        value: INT_MARKER.pose.orientation.y
+      - name: z_ori
+        value: INT_MARKER.pose.orientation.z
+      - name: w_ori
+        value: INT_MARKER.pose.orientation.w
+    service_type_for_addition: AddTaskMarker
+    service_topic_for_addition: interactive_markers_2d_pose  # This must be one of 'topics'
+    service_req_attr: pose
+    service_req_value: INT_MARKER.pose
+
+mapping:
+  - name: list_pose  # name of 'group' or 'member'
+    type: TASK_LIST_POSEDICT
+    topics:
+      # NOTE: DO NOT HAVE DIFFERENT TOPICS WITH DIFFERENT TYPES DEFINED IN COMMON.YAML
+      - interactive_markers_2d_area
+    # Service values are hard coded depending on the type of 'break_down' defined in parameter_group config
+    service_type_for_addition: AddTaskMarkerArea
+    service_topic_for_addition: interactive_markers_2d_area
+
+move_to_poi_and_cap_burst:
+  - name: pose
+    type: TASK
+    topics:
+      - interactive_markers_2d_pose
+    members:  # this element is required iif name is from 'group' whose mode is 'build_up'
+      - name: x_pos
+        value: INT_MARKER.pose.position.x
+      - name: y_pos
+        value: INT_MARKER.pose.position.y
+      - name: z_pos
+        value: INT_MARKER.pose.position.z
+      - name: x_ori
+        value: INT_MARKER.pose.orientation.x
+      - name: y_ori
+        value: INT_MARKER.pose.orientation.y
+      - name: z_ori
+        value: INT_MARKER.pose.orientation.z
+      - name: w_ori
+        value: INT_MARKER.pose.orientation.w
+    # Following elements are required iif type == TASK and mode is not 'break_down'
+    service_type_for_addition: AddTaskMarker
+    service_topic_for_addition: interactive_markers_2d_pose  # This must be one of 'topics'
+    service_req_attr: pose
+    service_req_value: INT_MARKER.pose

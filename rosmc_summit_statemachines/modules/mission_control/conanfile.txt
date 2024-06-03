@@ -1,0 +1,15 @@
+[options]
+OpenSSL:shared=True
+
+[requires]
+rafcon/[~=0.14]@common/unstable
+ros_desktop/[~=1.4]@3rdparty/unstable
+rosmc_interface_msgs/[~=1.1]@moro/unstable
+
+[generators]
+virtualenv
+virtualrunenv
+virtualenv_python
+
+[imports]
+

@@ -1,6 +1,39 @@
 {
     "__jsonqualname__": "rafcon.core.states.hierarchy_state.HierarchyState", 
-    "data_flows": {}, 
+    "data_flows": {
+        "4": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 4, 
+            "from_key": 1, 
+            "from_state": "ZSXETY", 
+            "to_key": 7, 
+            "to_state": "MSXJQK"
+        }, 
+        "5": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 5, 
+            "from_key": 0, 
+            "from_state": "ZSXETY", 
+            "to_key": 6, 
+            "to_state": "MSXJQK"
+        }, 
+        "6": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 6, 
+            "from_key": 3, 
+            "from_state": "ZSXETY", 
+            "to_key": 1, 
+            "to_state": "MSXJQK"
+        }, 
+        "7": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 7, 
+            "from_key": 5, 
+            "from_state": "ZSXETY", 
+            "to_key": 0, 
+            "to_state": "MSXJQK"
+        }
+    }, 
     "description": null, 
     "income": {
         "__jsonqualname__": "rafcon.core.state_elements.logical_port.Income"
@@ -23,15 +56,6 @@
             }, 
             "default_value": 0.0, 
             "name": "x_pos_2"
-        }, 
-        "2": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
-            "data_port_id": 2, 
-            "data_type": {
-                "__type__": "__builtin__.float"
-            }, 
-            "default_value": 0.0, 
-            "name": "0"
         }, 
         "3": {
             "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 

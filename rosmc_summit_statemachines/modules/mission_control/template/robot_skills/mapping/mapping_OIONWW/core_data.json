@@ -1,0 +1,83 @@
+{
+    "__jsonqualname__": "rafcon.core.states.hierarchy_state.HierarchyState", 
+    "data_flows": {}, 
+    "description": null, 
+    "income": {
+        "__jsonqualname__": "rafcon.core.state_elements.logical_port.Income"
+    }, 
+    "input_data_ports": {
+        "0": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 0, 
+            "data_type": {
+                "__type__": "__builtin__.list"
+            }, 
+            "default_value": [
+                {
+                    "pitch": 0.0, 
+                    "roll": 0.0, 
+                    "x": 5.0, 
+                    "y": 1.0, 
+                    "yaw": 0.0, 
+                    "z": 0.0
+                }, 
+                {
+                    "pitch": 0.0, 
+                    "roll": 0.0, 
+                    "x": -8.0, 
+                    "y": 1.0, 
+                    "yaw": 0.0, 
+                    "z": 0.0
+                }, 
+                {
+                    "pitch": 0.0, 
+                    "roll": 0.0, 
+                    "x": -8.0, 
+                    "y": -3.0, 
+                    "yaw": 0.0, 
+                    "z": 0.0
+                }, 
+                {
+                    "pitch": 0.0, 
+                    "roll": 0.0, 
+                    "x": 5.0, 
+                    "y": -3.0, 
+                    "yaw": 0.0, 
+                    "z": 0.0
+                }
+            ], 
+            "name": "list_pose"
+        }
+    }, 
+    "name": "mapping", 
+    "outcomes": {
+        "-2": {
+            "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
+            "name": "preempted", 
+            "outcome_id": -2
+        }, 
+        "-1": {
+            "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
+            "name": "aborted", 
+            "outcome_id": -1
+        }, 
+        "0": {
+            "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
+            "name": "success", 
+            "outcome_id": 0
+        }
+    }, 
+    "output_data_ports": {}, 
+    "scoped_variables": {}, 
+    "state_id": "OIONWW", 
+    "transitions": {
+        "14": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 0, 
+            "from_state": "MYAMJO", 
+            "to_outcome": null, 
+            "to_state": "ZKZAZH", 
+            "transition_id": 14
+        }
+    }
+}

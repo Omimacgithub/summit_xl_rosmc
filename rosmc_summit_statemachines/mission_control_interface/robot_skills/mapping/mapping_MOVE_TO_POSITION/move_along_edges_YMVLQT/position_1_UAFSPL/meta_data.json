@@ -1,4 +1,7 @@
 {
+    "data_flow1": {}, 
+    "data_flow2": {}, 
+    "data_flow3": {}, 
     "gui": {
         "editor_gaphas": {
             "name": {
@@ -80,19 +83,6 @@
                     "items": [
                         0.5235096799883499, 
                         20.21575408774678
-                    ]
-                }
-            }
-        }
-    }, 
-    "input_data_port3": {
-        "gui": {
-            "editor_gaphas": {
-                "rel_pos": {
-                    "__jsonqualname__": "__builtin__.tuple", 
-                    "items": [
-                        0.5260283430041076, 
-                        18.030267159341726
                     ]
                 }
             }

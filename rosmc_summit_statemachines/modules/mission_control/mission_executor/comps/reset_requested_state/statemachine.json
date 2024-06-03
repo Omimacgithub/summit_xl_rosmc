@@ -1,0 +1,7 @@
+{
+    "creation_time": "2020-02-28 14:55:24", 
+    "last_update": "2020-03-26 12:02:27", 
+    "root_state_storage_id": "reset_requested_state_UIAMDF", 
+    "state_machine_version": null, 
+    "used_rafcon_version": "0.14.2"
+}

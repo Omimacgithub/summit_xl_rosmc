@@ -1,0 +1,46 @@
+move_to_poi:
+  - mode: build_up
+    group: pus
+    members:
+      - x_pos
+      - y_pos
+      - z_pos
+      - x_ori
+      - y_ori
+      - z_ori
+      - w_ori
+
+acsion:
+  - mode: break_down  # break_down mode: expand input parameters into elements
+    group: dicto  # this must be the same as the parameter used in Mission.srv
+    #members:
+    #  - x_pos
+    type: dict
+
+mapping:
+  - mode: break_down  # break_down mode: expand input parameters into elements
+    group: list_pose  # this must be the same as the parameter used in Mission.srv
+    type: posedict
+
+take_cap:
+  - mode: build_up
+    group: somthing
+    members:
+      - frontcam
+      - frontcam_filename
+      - leftcam
+      - leftcam_filename
+      - rightcam
+      - rightcam_filename
+
+move_to_poi_and_cap_burst:
+  - mode: build_up
+    group: pose
+    members:
+      - x_pos
+      - y_pos
+      - z_pos
+      - x_ori
+      - y_ori
+      - z_ori
+      - w_ori

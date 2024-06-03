@@ -1,0 +1,3 @@
+summit_xl: 
+  skill_root_dir: $ROSMC_SUMMIT_STATEMACHINES/mission_control_interface/robot_skills
+  name: summit_test_skills

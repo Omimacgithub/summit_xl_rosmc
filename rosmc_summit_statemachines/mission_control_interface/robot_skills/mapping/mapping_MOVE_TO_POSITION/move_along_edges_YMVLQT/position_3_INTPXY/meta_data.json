@@ -1,4 +1,7 @@
 {
+    "data_flow10": {}, 
+    "data_flow8": {}, 
+    "data_flow9": {}, 
     "gui": {
         "editor_gaphas": {
             "name": {
@@ -85,32 +88,6 @@
             }
         }
     }, 
-    "input_data_port3": {
-        "gui": {
-            "editor_gaphas": {
-                "rel_pos": {
-                    "__jsonqualname__": "__builtin__.tuple", 
-                    "items": [
-                        0, 
-                        18.030267159341726
-                    ]
-                }
-            }
-        }
-    }, 
-    "input_data_port4": {
-        "gui": {
-            "editor_gaphas": {
-                "rel_pos": {
-                    "__jsonqualname__": "__builtin__.tuple", 
-                    "items": [
-                        0, 
-                        15.844780230936667
-                    ]
-                }
-            }
-        }
-    }, 
     "outcome-1": {
         "gui": {
             "editor_gaphas": {
@@ -147,6 +124,27 @@
                         22.761502545438503
                     ]
                 }
+            }
+        }
+    }, 
+    "transition1": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
+            }
+        }
+    }, 
+    "transition2": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
+            }
+        }
+    }, 
+    "transition3": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
             }
         }
     }

@@ -1,0 +1,7 @@
+{
+    "creation_time": "2019-03-13 12:19:18", 
+    "last_update": "2020-04-20 16:02:54", 
+    "root_state_storage_id": "refresh_mission_state_OFCLCS", 
+    "state_machine_version": null, 
+    "used_rafcon_version": "0.14.2"
+}

@@ -1,4 +1,8 @@
 {
+    "data_flow1": {}, 
+    "data_flow2": {}, 
+    "data_flow3": {}, 
+    "data_flow4": {}, 
     "gui": {
         "editor_gaphas": {
             "name": {
@@ -72,19 +76,6 @@
             }
         }
     }, 
-    "input_data_port2": {
-        "gui": {
-            "editor_gaphas": {
-                "rel_pos": {
-                    "__jsonqualname__": "__builtin__.tuple", 
-                    "items": [
-                        0, 
-                        20.21575408774678
-                    ]
-                }
-            }
-        }
-    }, 
     "input_data_port3": {
         "gui": {
             "editor_gaphas": {
@@ -134,6 +125,27 @@
                         22.761502545438503
                     ]
                 }
+            }
+        }
+    }, 
+    "transition1": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
+            }
+        }
+    }, 
+    "transition2": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
+            }
+        }
+    }, 
+    "transition3": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
             }
         }
     }

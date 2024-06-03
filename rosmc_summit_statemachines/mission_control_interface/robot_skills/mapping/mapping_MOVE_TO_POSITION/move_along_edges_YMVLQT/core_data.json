@@ -9,14 +9,6 @@
             "to_key": 5, 
             "to_state": "ZSXETY"
         }, 
-        "4": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
-            "data_flow_id": 4, 
-            "from_key": 0, 
-            "from_state": "YMVLQT", 
-            "to_key": 2, 
-            "to_state": "ZSXETY"
-        }, 
         "5": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 5, 
@@ -25,28 +17,44 @@
             "to_key": 3, 
             "to_state": "ZSXETY"
         }, 
+        "6": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 6, 
+            "from_key": 1, 
+            "from_state": "YMVLQT", 
+            "to_key": 7, 
+            "to_state": "ORIUNF"
+        }, 
+        "7": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 7, 
+            "from_key": 5, 
+            "from_state": "YMVLQT", 
+            "to_key": 6, 
+            "to_state": "ORIUNF"
+        }, 
+        "8": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 8, 
+            "from_key": 9, 
+            "from_state": "YMVLQT", 
+            "to_key": 1, 
+            "to_state": "ORIUNF"
+        }, 
+        "9": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 9, 
+            "from_key": 9, 
+            "from_state": "YMVLQT", 
+            "to_key": 0, 
+            "to_state": "ORIUNF"
+        }, 
         "13": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 13, 
             "from_key": 9, 
             "from_state": "YMVLQT", 
             "to_key": 2, 
-            "to_state": "INTPXY"
-        }, 
-        "14": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
-            "data_flow_id": 14, 
-            "from_key": 0, 
-            "from_state": "YMVLQT", 
-            "to_key": 4, 
-            "to_state": "INTPXY"
-        }, 
-        "15": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
-            "data_flow_id": 15, 
-            "from_key": 12, 
-            "from_state": "YMVLQT", 
-            "to_key": 3, 
             "to_state": "INTPXY"
         }, 
         "21": {
@@ -57,14 +65,6 @@
             "to_key": 2, 
             "to_state": "UAFSPL"
         }, 
-        "23": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
-            "data_flow_id": 23, 
-            "from_key": 0, 
-            "from_state": "YMVLQT", 
-            "to_key": 2, 
-            "to_state": "GKERLO"
-        }, 
         "24": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 24, 
@@ -72,14 +72,6 @@
             "from_state": "YMVLQT", 
             "to_key": 3, 
             "to_state": "GKERLO"
-        }, 
-        "26": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
-            "data_flow_id": 26, 
-            "from_key": 0, 
-            "from_state": "YMVLQT", 
-            "to_key": 3, 
-            "to_state": "UAFSPL"
         }, 
         "27": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
@@ -151,15 +143,6 @@
         "__jsonqualname__": "rafcon.core.state_elements.logical_port.Income"
     }, 
     "input_data_ports": {
-        "0": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
-            "data_port_id": 0, 
-            "data_type": {
-                "__type__": "__builtin__.float"
-            }, 
-            "default_value": 0.0, 
-            "name": "0"
-        }, 
         "1": {
             "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
             "data_port_id": 1, 
@@ -273,6 +256,30 @@
     "scoped_variables": {}, 
     "state_id": "YMVLQT", 
     "transitions": {
+        "4": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 0, 
+            "from_state": "GKERLO", 
+            "to_outcome": null, 
+            "to_state": "ORIUNF", 
+            "transition_id": 4
+        }, 
+        "5": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": -1, 
+            "from_state": "ORIUNF", 
+            "to_outcome": -1, 
+            "to_state": "YMVLQT", 
+            "transition_id": 5
+        }, 
+        "6": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 0, 
+            "from_state": "ORIUNF", 
+            "to_outcome": 0, 
+            "to_state": "YMVLQT", 
+            "transition_id": 6
+        }, 
         "12": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": -1, 
