@@ -5,11 +5,9 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /Status1
-        - /TF1
         - /TF1/Frames1
       Splitter Ratio: 0.5
-    Tree Height: 483
+    Tree Height: 384
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -27,7 +25,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: LaserScan
+    SyncSource: Camera
   - Class: rosmc_status_monitor/CameraPosePublisherPanel
     Name: CameraPosePublisherPanel
   - Class: teleop_panel/Teleop
@@ -148,59 +146,33 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        robot_front_laser_base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        robot_front_laser_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
         robot_front_left_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot_front_ptz_camera_base_link:
+        robot_front_rgbd_camera_base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot_front_ptz_camera_frame_link:
+        robot_front_rgbd_camera_camera_center:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot_front_ptz_camera_optical_frame_link:
+        robot_front_rgbd_camera_left_camera_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot_front_ptz_camera_pan_link:
+        robot_front_rgbd_camera_left_camera_optical_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot_front_ptz_camera_tilt_link:
+        robot_front_rgbd_camera_right_camera_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot_front_rgbd_camera_depth_frame:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot_front_rgbd_camera_depth_optical_frame:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot_front_rgbd_camera_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        robot_front_rgbd_camera_rgb_frame:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot_front_rgbd_camera_rgb_optical_frame:
+        robot_front_rgbd_camera_right_camera_optical_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -224,6 +196,15 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        robot_top_3d_laser_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot_top_3d_laser_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
       Name: RobotModel
       Robot Description: robot/robot_description
       TF Prefix: ""
@@ -286,7 +267,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.009999999776482582
       Style: Flat Squares
-      Topic: /robot/front_laser/scan
+      Topic: /robot/scan
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -355,7 +336,7 @@ Visualization Manager:
     - Class: rviz/Camera
       Enabled: false
       Image Rendering: background and overlay
-      Image Topic: /robot/front_rgbd_camera/rgb/image_rect_color
+      Image Topic: /camera2/rgb/image_raw
       Name: Camera
       Overlay Alpha: 0.5
       Queue Size: 2
@@ -363,7 +344,6 @@ Visualization Manager:
       Unreliable: false
       Value: false
       Visibility:
-        "": true
         AerialMapDisplay: true
         Agent Markers: true
         Grid: true
@@ -377,106 +357,25 @@ Visualization Manager:
         ROI Vertices: true
         ROIs: true
         RobotModel: true
+        TF: true
         Value: true
       Zoom Factor: 1
     - Class: rviz/TF
-      Enabled: true
+      Enabled: false
       Filter (blacklist): ""
       Filter (whitelist): ""
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        robot_back_left_wheel:
-          Value: false
-        robot_back_right_wheel:
-          Value: false
-        robot_base_docking_contact_link:
-          Value: false
-        robot_base_footprint:
-          Value: false
-        robot_base_link:
-          Value: true
-        robot_front_laser_base_link:
-          Value: false
-        robot_front_laser_link:
-          Value: false
-        robot_front_left_wheel:
-          Value: false
-        robot_front_ptz_camera_base_link:
-          Value: false
-        robot_front_ptz_camera_frame_link:
-          Value: false
-        robot_front_ptz_camera_optical_frame_link:
-          Value: false
-        robot_front_ptz_camera_pan_link:
-          Value: false
-        robot_front_ptz_camera_tilt_link:
-          Value: false
-        robot_front_rgbd_camera_depth_frame:
-          Value: false
-        robot_front_rgbd_camera_depth_optical_frame:
-          Value: false
-        robot_front_rgbd_camera_link:
-          Value: false
-        robot_front_rgbd_camera_rgb_frame:
-          Value: false
-        robot_front_rgbd_camera_rgb_optical_frame:
-          Value: false
-        robot_front_right_wheel:
-          Value: false
-        robot_gps_base_link:
-          Value: false
-        robot_gps_mast_base_link:
-          Value: false
-        robot_imu_link:
-          Value: false
-        robot_map:
-          Value: true
-        robot_odom:
-          Value: false
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        robot_map:
-          robot_odom:
-            robot_base_footprint:
-              robot_base_link:
-                robot_back_left_wheel:
-                  {}
-                robot_back_right_wheel:
-                  {}
-                robot_base_docking_contact_link:
-                  {}
-                robot_front_laser_base_link:
-                  robot_front_laser_link:
-                    {}
-                robot_front_left_wheel:
-                  {}
-                robot_front_ptz_camera_base_link:
-                  robot_front_ptz_camera_pan_link:
-                    robot_front_ptz_camera_tilt_link:
-                      robot_front_ptz_camera_frame_link:
-                        robot_front_ptz_camera_optical_frame_link:
-                          {}
-                robot_front_rgbd_camera_link:
-                  robot_front_rgbd_camera_depth_frame:
-                    robot_front_rgbd_camera_depth_optical_frame:
-                      {}
-                  robot_front_rgbd_camera_rgb_frame:
-                    robot_front_rgbd_camera_rgb_optical_frame:
-                      {}
-                robot_front_right_wheel:
-                  {}
-                robot_gps_mast_base_link:
-                  robot_gps_base_link:
-                    {}
-                robot_imu_link:
-                  {}
+        {}
       Update Interval: 0
-      Value: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -503,25 +402,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 6.59100866317749
+      Distance: 17.53276252746582
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 3.226104497909546
-        Y: -0.10778969526290894
-        Z: -2.089991569519043
+        X: 0.9464445114135742
+        Y: 0.5406992435455322
+        Z: -1.2972468137741089
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.42979758977890015
+      Pitch: 1.0647974014282227
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.1472179889678955
+      Yaw: 2.1122262477874756
     Saved: ~
 Window Geometry:
   Camera:
@@ -533,7 +432,7 @@ Window Geometry:
   Height: 1128
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000003a1000003a6fc020000000bfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000008200fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000052000002310000011e00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000003000430061006d0065007200610050006f00730065005000750062006c0069007300680065007200500061006e0065006c00000002990000001a0000001a00fffffffb0000000c00540065006c0065006f0070010000028c0000016c0000013c00fffffffb0000000c00430061006d00650072006100000002db0000011d0000001a00ffffff000000010000010f000002b6fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003a000002b6000000e000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000078000000045fc0100000002fb0000000800540069006d00650100000000000007800000034f00fffffffb0000000800540069006d00650100000000000004500000000000000000000003d6000003a600000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000017b000003a6fc020000000bfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000008200fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000052000001ce0000011e00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000003000430061006d0065007200610050006f00730065005000750062006c0069007300680065007200500061006e0065006c00000002990000001a0000001a00fffffffb0000000c00540065006c0065006f00700100000229000001cf0000013c00fffffffb0000000c00430061006d00650072006100000002db0000011d0000001a00ffffff000000010000010f000002b6fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003a000002b6000000e000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000078000000045fc0100000002fb0000000800540069006d00650100000000000007800000034f00fffffffb0000000800540069006d00650100000000000004500000000000000000000005fc000003a600000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Teleop:

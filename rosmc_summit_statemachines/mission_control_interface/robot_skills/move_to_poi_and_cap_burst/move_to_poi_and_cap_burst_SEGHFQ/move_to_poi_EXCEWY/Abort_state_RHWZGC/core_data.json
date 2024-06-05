@@ -5,7 +5,7 @@
         "__jsonqualname__": "rafcon.core.state_elements.logical_port.Income"
     }, 
     "input_data_ports": {}, 
-    "name": "cap_burst", 
+    "name": "Abort state", 
     "outcomes": {
         "-2": {
             "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
@@ -34,5 +34,5 @@
             "name": "fault"
         }
     }, 
-    "state_id": "TQNNME"
+    "state_id": "RHWZGC"
 }

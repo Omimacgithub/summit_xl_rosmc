@@ -12,16 +12,14 @@ def capture(topic, filename):
             "_filename_format:=/home/robot/shots/" + filename + "%04d.%s", 
             "__name:=image_node"]
     process = subprocess.Popen(cap)
-    #service = ["rosservice", "call", "/summit_xl/image_" + topic + "/save"]
-    #subprocess.call(service)
-    #Mejor forma:
-    rospy.sleep(2)
-    rospy.wait_for_service('/summit_xl/image_node/save')
+    #rospy.sleep(2)
     try:
-	    calling = rospy.ServiceProxy('/summit_xl/image_node/save', std_srvs.srv.Empty)
-	    calling()
+        rospy.wait_for_service('/summit_xl/image_node/save')
+        calling = rospy.ServiceProxy('/summit_xl/image_node/save', std_srvs.srv.Empty)
+        calling()
     except rospy.ServiceException as e:
         print("Service call failed: %s"%e)
+        return "aborted"
     finally:
         kill = ["rosnode", "kill", "/summit_xl/image_node"]
         subprocess.call(kill)
@@ -33,7 +31,10 @@ def execute(self, inputs, outputs, gvm):
     right = "right" if inputs["rightcam_filename"] == "" else inputs["rightcam_filename"]
     #front camera
     if inputs["frontcam"] == 1:
-        capture("/robot/front_rgbd_camera/rgb/image_rect_color", front)
+        #Simulation
+        capture("/robot/front_rgbd_camera/rgb/image_raw", front)
+        #Real, for unsynchronize reason, the frontcam doesn't work
+        #capture("/robot/front_rgbd_camera/rgb/image_rect_color", front)
     #left camera
     if inputs["leftcam"] == 1:
         capture("/camera1/rgb/image_color", left)

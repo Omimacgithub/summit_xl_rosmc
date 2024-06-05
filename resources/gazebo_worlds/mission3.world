@@ -1,0 +1,1125 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <physics name='default_physics' default='0' type='ode'>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>20</iters>
+          <sor>1</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100</contact_max_correcting_vel>
+          <contact_surface_layer>0</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='robot'>
+      <link name='robot_base_footprint'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>-0.001036 0.000135 0.132814 0 -0 0</pose>
+          <mass>27.436</mass>
+          <inertia>
+            <ixx>1.58468</ixx>
+            <ixy>0.00286881</ixy>
+            <ixz>0.0401562</ixz>
+            <iyy>7.15835</iyy>
+            <iyz>-0.000607226</iyz>
+            <izz>6.24073</izz>
+          </inertia>
+        </inertial>
+        <collision name='robot_base_footprint_fixed_joint_lump__robot_base_link_collision'>
+          <pose frame=''>0 0 0.11 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/robot/catkin_ws/src/summit_xl_common/summit_xl_description/meshes/bases/summit_xl_chassis_collision.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='robot_base_footprint_fixed_joint_lump__robot_front_laser_base_link_collision_1'>
+          <pose frame=''>0 0 0.3826 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.01 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='robot_base_footprint_fixed_joint_lump__robot_front_ptz_camera_base_link_collision_2'>
+          <pose frame=''>0.185 0 0.3067 0 0.261799 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/robot/catkin_ws/src/robotnik_sensors/meshes/axis_p5514.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='robot_base_footprint_fixed_joint_lump__robot_front_rgbd_camera_link_collision_3'>
+          <pose frame=''>0.324 0.012 0.282 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/robot/catkin_ws/src/robotnik_sensors/meshes/orbbec_astra.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='robot_base_footprint_fixed_joint_lump__robot_gps_mast_base_link_collision_4'>
+          <pose frame=''>-0.22 0 0.385 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.5</length>
+              <radius>0.01</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='robot_base_footprint_fixed_joint_lump__robot_gps_base_link_collision_5'>
+          <pose frame=''>-0.22 0 0.635 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/robot/catkin_ws/src/robotnik_sensors/meshes/antenna_3GO16.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='robot_base_footprint_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.001 0.001 0.001</size>
+            </box>
+          </geometry>
+        </visual>
+        <visual name='robot_base_footprint_fixed_joint_lump__robot_base_link_visual_1'>
+          <pose frame=''>0 0 0.11 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/robot/catkin_ws/src/summit_xl_common/summit_xl_description/meshes/bases/summit_xl_chassis.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='robot_base_footprint_fixed_joint_lump__robot_front_laser_base_link_visual_2'>
+          <pose frame=''>0 0 0.3826 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/robot/catkin_ws/src/robotnik_sensors/meshes/hokuyo_ust_20lx.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='robot_base_footprint_fixed_joint_lump__robot_front_ptz_camera_base_link_visual_3'>
+          <pose frame=''>0.185 0 0.3067 0 0.261799 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/robot/catkin_ws/src/robotnik_sensors/meshes/axis_p5514.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/FlatBlack</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='robot_base_footprint_fixed_joint_lump__robot_front_rgbd_camera_link_visual_4'>
+          <pose frame=''>0.324 0.012 0.282 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/robot/catkin_ws/src/robotnik_sensors/meshes/orbbec_astra.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='robot_base_footprint_fixed_joint_lump__robot_gps_mast_base_link_visual_5'>
+          <pose frame=''>-0.22 0 0.385 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.5</length>
+              <radius>0.01</radius>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='robot_base_footprint_fixed_joint_lump__robot_gps_base_link_visual_6'>
+          <pose frame=''>-0.22 0 0.635 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/robot/catkin_ws/src/robotnik_sensors/meshes/antenna_3GO16.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/White</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='robot_base_footprint_fixed_joint_lump__robot_imu_link_visual_7'>
+          <pose frame=''>-0.18 0 0.28 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.001 0.001 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <sensor name='robot_front_laser_sensor' type='gpu_ray'>
+          <visualize>0</visualize>
+          <update_rate>40</update_rate>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>1081</samples>
+                <resolution>1</resolution>
+                <min_angle>-2.3562</min_angle>
+                <max_angle>2.3562</max_angle>
+              </horizontal>
+            </scan>
+            <range>
+              <min>0.06</min>
+              <max>20</max>
+              <resolution>0.0043593</resolution>
+            </range>
+            <noise>
+              <type>gaussian</type>
+              <mean>0</mean>
+              <stddev>0.01</stddev>
+            </noise>
+          </ray>
+          <plugin name='robot_front_laser_controller' filename='libgazebo_ros_gpu_laser.so'>
+            <topicName>front_laser/scan</topicName>
+            <frameName>/robot_front_laser_link</frameName>
+            <robotNamespace>/robot/</robotNamespace>
+          </plugin>
+          <pose frame=''>0 0 0.43 0 -0 0</pose>
+        </sensor>
+        <velocity_decay/>
+        <velocity_decay/>
+        <sensor name='robot_front_rgbd_camera_depth_sensor' type='depth'>
+          <always_on>1</always_on>
+          <update_rate>20</update_rate>
+          <camera name='__default__'>
+            <horizontal_fov>1.0472</horizontal_fov>
+            <image>
+              <format>R8G8B8</format>
+              <width>640</width>
+              <height>480</height>
+            </image>
+            <clip>
+              <near>0.05</near>
+              <far>3.5</far>
+            </clip>
+          </camera>
+          <plugin name='robot_front_rgbd_camera_controller' filename='libgazebo_ros_openni_kinect.so'>
+            <cameraName>front_rgbd_camera</cameraName>
+            <alwaysOn>1</alwaysOn>
+            <updateRate>10</updateRate>
+            <imageTopicName>rgb/image_raw</imageTopicName>
+            <depthImageTopicName>depth/image_raw</depthImageTopicName>
+            <pointCloudTopicName>depth/points</pointCloudTopicName>
+            <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+            <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+            <frameName>/robot_front_rgbd_camera_depth_optical_frame</frameName>
+            <baseline>0.1</baseline>
+            <distortion_k1>0.0</distortion_k1>
+            <distortion_k2>0.0</distortion_k2>
+            <distortion_k3>0.0</distortion_k3>
+            <distortion_t1>0.0</distortion_t1>
+            <distortion_t2>0.0</distortion_t2>
+            <pointCloudCutoff>0.4</pointCloudCutoff>
+            <robotNamespace>/robot/</robotNamespace>
+          </plugin>
+          <pose frame=''>0.324 0.012 0.282 0 -0 0</pose>
+        </sensor>
+        <velocity_decay/>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <gravity>1</gravity>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <gravity>1</gravity>
+        <sensor name='robot_imu_imu_sensor' type='imu'>
+          <always_on>1</always_on>
+          <update_rate>100</update_rate>
+          <visualize>1</visualize>
+          <topic>__default_topic__</topic>
+          <plugin name='robot_imu_imu_plugin' filename='libgazebo_ros_imu_sensor.so'>
+            <topicName>imu/data_raw</topicName>
+            <bodyName>robot_imu_link</bodyName>
+            <updateRateHZ>100.0</updateRateHZ>
+            <gaussianNoise>0.0</gaussianNoise>
+            <xyzOffset>0 0 0</xyzOffset>
+            <rpyOffset>0 0 0</rpyOffset>
+            <frameName>robot_imu_link</frameName>
+            <robotNamespace>/robot/</robotNamespace>
+          </plugin>
+          <pose frame=''>-0.18 0 0.28 0 -0 0</pose>
+          <imu/>
+        </sensor>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='robot_back_left_wheel'>
+        <pose frame=''>-0.229 0.235 0.11 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>6.5</mass>
+          <inertia>
+            <ixx>0.03185</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.039325</iyy>
+            <iyz>0</iyz>
+            <izz>0.03185</izz>
+          </inertia>
+        </inertial>
+        <collision name='robot_back_left_wheel_collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.15</length>
+              <radius>0.11</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='robot_back_left_wheel_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/robot/catkin_ws/src/summit_xl_common/summit_xl_description/meshes/wheels/rubber_wheel_left.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='robot_back_left_wheel_joint' type='revolute'>
+        <child>robot_back_left_wheel</child>
+        <parent>robot_base_footprint</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='robot_back_right_wheel'>
+        <pose frame=''>-0.229 -0.235 0.11 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>6.5</mass>
+          <inertia>
+            <ixx>0.03185</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.039325</iyy>
+            <iyz>0</iyz>
+            <izz>0.03185</izz>
+          </inertia>
+        </inertial>
+        <collision name='robot_back_right_wheel_collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.15</length>
+              <radius>0.11</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='robot_back_right_wheel_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/robot/catkin_ws/src/summit_xl_common/summit_xl_description/meshes/wheels/rubber_wheel_right.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='robot_back_right_wheel_joint' type='revolute'>
+        <child>robot_back_right_wheel</child>
+        <parent>robot_base_footprint</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='robot_front_left_wheel'>
+        <pose frame=''>0.229 0.235 0.11 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>6.5</mass>
+          <inertia>
+            <ixx>0.03185</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.039325</iyy>
+            <iyz>0</iyz>
+            <izz>0.03185</izz>
+          </inertia>
+        </inertial>
+        <collision name='robot_front_left_wheel_collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.15</length>
+              <radius>0.11</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='robot_front_left_wheel_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/robot/catkin_ws/src/summit_xl_common/summit_xl_description/meshes/wheels/rubber_wheel_left.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='robot_front_left_wheel_joint' type='revolute'>
+        <child>robot_front_left_wheel</child>
+        <parent>robot_base_footprint</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='robot_front_ptz_camera_pan_link'>
+        <pose frame=''>0.185 0 0.3067 0 0.261799 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.000201667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000184167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000184167</izz>
+          </inertia>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='robot_front_ptz_camera_pan_joint' type='revolute'>
+        <child>robot_front_ptz_camera_pan_link</child>
+        <parent>robot_base_footprint</parent>
+        <axis>
+          <xyz>0.258819 0 0.965926</xyz>
+          <limit>
+            <lower>-3.1415</lower>
+            <upper>3.1415</upper>
+            <effort>1</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='robot_front_ptz_camera_tilt_link'>
+        <pose frame=''>0.185 0 0.3067 -1.5708 0.261799 -0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.3</mass>
+          <inertia>
+            <ixx>0.00057</ixx>
+            <ixy>8.56903e-17</ixy>
+            <ixz>8.56903e-17</ixz>
+            <iyy>0.0005525</iyy>
+            <iyz>4.1959e-28</iyz>
+            <izz>0.0005875</izz>
+          </inertia>
+        </inertial>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <sensor name='robot_front_ptz_camera_sensor' type='camera'>
+          <update_rate>30</update_rate>
+          <camera name='__default__'>
+            <horizontal_fov>1.0472</horizontal_fov>
+            <image>
+              <format>R8G8B8</format>
+              <width>640</width>
+              <height>480</height>
+            </image>
+            <clip>
+              <near>0.05</near>
+              <far>8</far>
+            </clip>
+          </camera>
+          <plugin name='robot_front_ptz_camera_controller' filename='libgazebo_ros_camera.so'>
+            <alwaysOn>1</alwaysOn>
+            <updateRate>0.0</updateRate>
+            <cameraName>robot_front_ptz_camera</cameraName>
+            <imageTopicName>image_raw</imageTopicName>
+            <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+            <frameName>/robot_front_ptz_camera_optical_frame_link</frameName>
+            <hackBaseline>0.0</hackBaseline>
+            <distortionK1>0.0</distortionK1>
+            <distortionK2>0.0</distortionK2>
+            <distortionK3>0.0</distortionK3>
+            <distortionT1>0.0</distortionT1>
+            <distortionT2>0.0</distortionT2>
+            <robotNamespace>/robot/</robotNamespace>
+          </plugin>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+        </sensor>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='robot_front_ptz_camera_tilt_joint' type='revolute'>
+        <child>robot_front_ptz_camera_tilt_link</child>
+        <parent>robot_front_ptz_camera_pan_link</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.5708</lower>
+            <upper>1.5708</upper>
+            <effort>1</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='robot_front_right_wheel'>
+        <pose frame=''>0.229 -0.235 0.11 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>6.5</mass>
+          <inertia>
+            <ixx>0.03185</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.039325</iyy>
+            <iyz>0</iyz>
+            <izz>0.03185</izz>
+          </inertia>
+        </inertial>
+        <collision name='robot_front_right_wheel_collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.15</length>
+              <radius>0.11</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='robot_front_right_wheel_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/robot/catkin_ws/src/summit_xl_common/summit_xl_description/meshes/wheels/rubber_wheel_right.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='robot_front_right_wheel_joint' type='revolute'>
+        <child>robot_front_right_wheel</child>
+        <parent>robot_base_footprint</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <plugin name='ros_control' filename='libgazebo_ros_control.so'>
+        <robotParam>robot_description</robotParam>
+        <controlPeriod>0.001</controlPeriod>
+        <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+        <legacyModeNS>1</legacyModeNS>
+        <robotNamespace>/robot/</robotNamespace>
+      </plugin>
+      <plugin name='skid_steering' filename='libgazebo_ros_planar_move.so'>
+        <commandTopic>robotnik_base_control/cmd_vel</commandTopic>
+        <odometryTopic>robotnik_base_control/odom</odometryTopic>
+        <odometryFrame>robot_odom</odometryFrame>
+        <odometryRate>50.0</odometryRate>
+        <robotBaseFrame>robot_base_footprint</robotBaseFrame>
+        <publishTF>1</publishTF>
+        <enableYAxis>0</enableYAxis>
+        <robotNamespace>/robot/</robotNamespace>
+      </plugin>
+      <static>0</static>
+      <plugin name='robot_gps_controller' filename='libhector_gazebo_ros_gps.so'>
+        <alwaysOn>1</alwaysOn>
+        <updateRate>5</updateRate>
+        <frameId>robot_gps_base_link</frameId>
+        <topicName>gps/fix</topicName>
+        <referenceLatitude>43.333</referenceLatitude>
+        <referenceLongitude>-8.40827</referenceLongitude>
+        <referenceHeading>90</referenceHeading>
+        <velocityTopicName>gps/fix_velocity</velocityTopicName>
+        <drift>0.0 0.0 0.0</drift>
+        <gaussianNoise>0.00001 0.00001 0.00001</gaussianNoise>
+        <velocityDrift>0.00001 0.00001 0.00001</velocityDrift>
+        <velocityGaussianNoise>0.00001 0.00001 0.00001</velocityGaussianNoise>
+        <robotNamespace>/robot/</robotNamespace>
+        <bodyName>robot_base_footprint</bodyName>
+        <xyzOffset>0.22 0 -0.635</xyzOffset>
+        <rpyOffset>0 -0 0</rpyOffset>
+      </plugin>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>545 876000000</sim_time>
+      <real_time>51 939509420</real_time>
+      <wall_time>1717527114 424637831</wall_time>
+      <iterations>51061</iterations>
+      <model name='bus'>
+        <pose frame=''>-2.97832 7.04231 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-2.97832 7.04231 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='bus_0'>
+        <pose frame=''>-2.79759 -7.47342 0 0 -0 3.12066</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-2.79759 -7.47342 0 0 -0 3.12066</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='bus_1'>
+        <pose frame=''>9.86565 0.059108 0 0 0 -1.55897</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>9.86565 0.059108 0 0 0 -1.55897</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='robot'>
+        <pose frame=''>-0.068678 -0.031549 -7e-06 0 1e-06 -0.014278</pose>
+        <scale>1 1 1</scale>
+        <link name='robot_back_left_wheel'>
+          <pose frame=''>-0.2943 0.206697 0.109993 -1e-06 0.224188 -0.014279</pose>
+          <velocity>1.3e-05 8e-06 4.4e-05 -7.5e-05 2.9e-05 5e-06</velocity>
+          <acceleration>0.012914 0.008234 0.043571 -0.074702 0.02888 0.004956</acceleration>
+          <wrench>0.08394 0.053518 0.283213 0 -0 0</wrench>
+        </link>
+        <link name='robot_back_right_wheel'>
+          <pose frame=''>-0.30101 -0.263256 0.109993 -1e-06 0.198935 -0.014279</pose>
+          <velocity>-3e-06 9e-06 4.7e-05 -7.9e-05 -0.000107 6e-06</velocity>
+          <acceleration>-0.00272 0.008721 0.04698 -0.078859 -0.106996 0.005935</acceleration>
+          <wrench>-0.017677 0.056688 0.305373 0 -0 0</wrench>
+        </link>
+        <link name='robot_base_footprint'>
+          <pose frame=''>-0.068678 -0.031549 -7e-06 0 1e-06 -0.014278</pose>
+          <velocity>-8e-06 -1e-06 2.9e-05 -9e-06 7.2e-05 -5.1e-05</velocity>
+          <acceleration>0.002053 0.00044 0.029334 -0.01307 0.072185 -0.050544</acceleration>
+          <wrench>0.056328 0.01207 0.804799 0 -0 0</wrench>
+        </link>
+        <link name='robot_front_left_wheel'>
+          <pose frame=''>0.163654 0.200158 0.109993 3.14156 1.27249 3.12729</pose>
+          <velocity>9e-06 -5e-06 1e-06 2.8e-05 0.000122 -1.7e-05</velocity>
+          <acceleration>0.00864 -0.004551 0.001324 0.027715 0.122041 -0.016948</acceleration>
+          <wrench>0.056158 -0.029582 0.008605 0 -0 0</wrench>
+        </link>
+        <link name='robot_front_ptz_camera_pan_link'>
+          <pose frame=''>0.116303 -0.03419 0.306693 -0.023861 0.260738 -0.106592</pose>
+          <velocity>1.2e-05 -8e-06 1.7e-05 0.258771 0.003364 0.961081</velocity>
+          <acceleration>0.01239 -0.007973 0.017472 1.74715 -0.438012 -2.8486</acceleration>
+          <wrench>0.001239 -0.000797 0.001747 0 -0 0</wrench>
+        </link>
+        <link name='robot_front_ptz_camera_tilt_link'>
+          <pose frame=''>0.116303 -0.03419 0.306693 -1.59534 0.34911 -0.108833</pose>
+          <velocity>1.2e-05 -8e-06 1.7e-05 0.158176 -0.991293 0.984264</velocity>
+          <acceleration>0.01239 -0.007973 0.017472 -0.729356 -0.333228 -1.9784</acceleration>
+          <wrench>0.003717 -0.002392 0.005241 0 -0 0</wrench>
+        </link>
+        <link name='robot_front_right_wheel'>
+          <pose frame=''>0.156943 -0.269795 0.109993 -3.1415 -1.48045 3.12722</pose>
+          <velocity>-1.1e-05 -5e-06 -0 3.4e-05 4.6e-05 -6.1e-05</velocity>
+          <acceleration>-0.010724 -0.00508 -0.000187 0.033498 0.046299 -0.061118</acceleration>
+          <wrench>-0.069707 -0.033019 -0.001218 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>-5.96885 -1.77082 11.0174 0 0.819033 0.034217</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='bus'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>model://bus/meshes/bus.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>model://bus/meshes/bus.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-2.97832 7.04231 0 0 -0 0</pose>
+    </model>
+    <model name='bus_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>model://bus/meshes/bus.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>model://bus/meshes/bus.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-2.79759 -7.47342 0 0 -0 0</pose>
+    </model>
+    <model name='bus_1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>model://bus/meshes/bus.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.01 0.01 0.01</scale>
+              <uri>model://bus/meshes/bus.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>9.89695 -0.588254 0 0 -0 0</pose>
+    </model>
+  </world>
+</sdf>

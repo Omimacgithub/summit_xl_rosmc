@@ -4,7 +4,26 @@
     "income": {
         "__jsonqualname__": "rafcon.core.state_elements.logical_port.Income"
     }, 
-    "input_data_ports": {}, 
+    "input_data_ports": {
+        "0": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 0, 
+            "data_type": {
+                "__type__": "__builtin__.int"
+            }, 
+            "default_value": 0, 
+            "name": "fault_1"
+        }, 
+        "1": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 1, 
+            "data_type": {
+                "__type__": "__builtin__.int"
+            }, 
+            "default_value": 0, 
+            "name": "fault_2"
+        }
+    }, 
     "name": "Decider", 
     "outcomes": {
         "-2": {
