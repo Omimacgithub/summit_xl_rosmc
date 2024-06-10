@@ -197,6 +197,13 @@
             }
         }
     }, 
+    "transition1": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
+            }
+        }
+    }, 
     "transition13": {
         "gui": {
             "editor_gaphas": {
@@ -204,28 +211,7 @@
             }
         }
     }, 
-    "transition14": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": {}
-            }
-        }
-    }, 
-    "transition15": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": {}
-            }
-        }
-    }, 
     "transition16": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": {}
-            }
-        }
-    }, 
-    "transition7": {
         "gui": {
             "editor_gaphas": {
                 "waypoints": {}

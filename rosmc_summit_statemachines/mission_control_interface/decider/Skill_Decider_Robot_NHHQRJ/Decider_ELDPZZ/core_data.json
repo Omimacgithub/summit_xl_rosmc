@@ -104,6 +104,30 @@
             "from_state": "QXSWRE", 
             "to_key": 7, 
             "to_state": "ELDPZZ"
+        }, 
+        "27": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 27, 
+            "from_key": 10, 
+            "from_state": "IDFPFK", 
+            "to_key": 12, 
+            "to_state": "ELDPZZ"
+        }, 
+        "28": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 28, 
+            "from_key": 11, 
+            "from_state": "IDFPFK", 
+            "to_key": 13, 
+            "to_state": "ELDPZZ"
+        }, 
+        "29": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 29, 
+            "from_key": 12, 
+            "from_state": "IDFPFK", 
+            "to_key": 14, 
+            "to_state": "ELDPZZ"
         }
     }, 
     "description": null, 
@@ -263,6 +287,33 @@
             }, 
             "default_value": null, 
             "name": "param6"
+        }, 
+        "12": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.OutputDataPort", 
+            "data_port_id": 12, 
+            "data_type": {
+                "__type__": "__builtin__.object"
+            }, 
+            "default_value": null, 
+            "name": "output_12"
+        }, 
+        "13": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.OutputDataPort", 
+            "data_port_id": 13, 
+            "data_type": {
+                "__type__": "__builtin__.object"
+            }, 
+            "default_value": null, 
+            "name": "output_13"
+        }, 
+        "14": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.OutputDataPort", 
+            "data_port_id": 14, 
+            "data_type": {
+                "__type__": "__builtin__.object"
+            }, 
+            "default_value": null, 
+            "name": "output_14"
         }
     }, 
     "scoped_variables": {}, 

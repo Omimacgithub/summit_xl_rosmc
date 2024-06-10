@@ -906,35 +906,45 @@
       <pose frame=''>0 0 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>545 876000000</sim_time>
-      <real_time>51 939509420</real_time>
-      <wall_time>1717527114 424637831</wall_time>
-      <iterations>51061</iterations>
-      <model name='bus'>
-        <pose frame=''>-2.97832 7.04231 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-2.97832 7.04231 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='bus_0'>
-        <pose frame=''>-2.79759 -7.47342 0 0 -0 3.12066</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-2.79759 -7.47342 0 0 -0 3.12066</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
+      <sim_time>1538 817000000</sim_time>
+      <real_time>355 646262054</real_time>
+      <wall_time>1718056741 175422290</wall_time>
+      <iterations>323386</iterations>
       <model name='bus_1'>
-        <pose frame=''>9.86565 0.059108 0 0 0 -1.55897</pose>
+        <pose frame=''>9.98348 0.702897 0 0 0 -1.55897</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>9.86565 0.059108 0 0 0 -1.55897</pose>
+          <pose frame=''>9.98348 0.702897 0 0 0 -1.55897</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='bus_stop'>
+        <pose frame=''>-0.05686 2.9789 0.002439 0 -0 3.13446</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>-0.05686 2.9789 0.002439 0 -0 3.13446</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-3.09685 0.866932 -1.08699 2.73053 1.0649 1.13298</acceleration>
+          <wrench>-1856.01 519.571 -651.457 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='bus_stop_0'>
+        <pose frame=''>-0.048669 -2.18937 0.002439 -0 -0 -9.2e-05</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>-0.048669 -2.18937 0.002439 -0 -0 -9.2e-05</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-2.95513 1.3904 1.64468 1.94211 0.331477 -2.89967</acceleration>
+          <wrench>-1771.07 833.301 985.691 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='fire_hydrant'>
+        <pose frame=''>-4.16531 3.06451 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-4.16531 3.06451 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -951,49 +961,49 @@
         </link>
       </model>
       <model name='robot'>
-        <pose frame=''>-0.068678 -0.031549 -7e-06 0 1e-06 -0.014278</pose>
+        <pose frame=''>0.240424 0.994056 -7e-06 0 0 -0.083859</pose>
         <scale>1 1 1</scale>
         <link name='robot_back_left_wheel'>
-          <pose frame=''>-0.2943 0.206697 0.109993 -1e-06 0.224188 -0.014279</pose>
-          <velocity>1.3e-05 8e-06 4.4e-05 -7.5e-05 2.9e-05 5e-06</velocity>
-          <acceleration>0.012914 0.008234 0.043571 -0.074702 0.02888 0.004956</acceleration>
-          <wrench>0.08394 0.053518 0.283213 0 -0 0</wrench>
+          <pose frame=''>0.031913 1.24741 0.109993 -1e-06 0.108841 -0.083859</pose>
+          <velocity>1.2e-05 7e-06 4.6e-05 -6.8e-05 6.1e-05 -1e-06</velocity>
+          <acceleration>0.011581 0.007146 0.045699 -0.068889 0.0618 -0.001107</acceleration>
+          <wrench>0.075277 0.04645 0.297045 0 -0 0</wrench>
         </link>
         <link name='robot_back_right_wheel'>
-          <pose frame=''>-0.30101 -0.263256 0.109993 -1e-06 0.198935 -0.014279</pose>
-          <velocity>-3e-06 9e-06 4.7e-05 -7.9e-05 -0.000107 6e-06</velocity>
-          <acceleration>-0.00272 0.008721 0.04698 -0.078859 -0.106996 0.005935</acceleration>
-          <wrench>-0.017677 0.056688 0.305373 0 -0 0</wrench>
+          <pose frame=''>-0.007455 0.779063 0.109993 -1e-06 0.047379 -0.083859</pose>
+          <velocity>-2e-06 9e-06 5.3e-05 -7.9e-05 -4.2e-05 -3e-06</velocity>
+          <acceleration>-0.002345 0.008568 0.053457 -0.078012 -0.041084 -0.003014</acceleration>
+          <wrench>-0.01524 0.055695 0.347469 0 -0 0</wrench>
         </link>
         <link name='robot_base_footprint'>
-          <pose frame=''>-0.068678 -0.031549 -7e-06 0 1e-06 -0.014278</pose>
-          <velocity>-8e-06 -1e-06 2.9e-05 -9e-06 7.2e-05 -5.1e-05</velocity>
-          <acceleration>0.002053 0.00044 0.029334 -0.01307 0.072185 -0.050544</acceleration>
-          <wrench>0.056328 0.01207 0.804799 0 -0 0</wrench>
+          <pose frame=''>0.240424 0.994056 -7e-06 0 0 -0.083859</pose>
+          <velocity>-4e-06 -1e-06 3.7e-05 -1.3e-05 5.7e-05 -4.3e-05</velocity>
+          <acceleration>0.003531 0.000897 0.036844 -0.02951 0.059593 -0.043236</acceleration>
+          <wrench>0.096887 0.02462 1.01086 0 -0 0</wrench>
         </link>
         <link name='robot_front_left_wheel'>
-          <pose frame=''>0.163654 0.200158 0.109993 3.14156 1.27249 3.12729</pose>
-          <velocity>9e-06 -5e-06 1e-06 2.8e-05 0.000122 -1.7e-05</velocity>
-          <acceleration>0.00864 -0.004551 0.001324 0.027715 0.122041 -0.016948</acceleration>
-          <wrench>0.056158 -0.029582 0.008605 0 -0 0</wrench>
+          <pose frame=''>0.488303 1.20905 0.109993 3.14159 0.369942 3.05773</pose>
+          <velocity>7e-06 -6e-06 1.8e-05 5.8e-05 0.000125 4e-06</velocity>
+          <acceleration>0.006623 -0.005986 0.018417 0.055349 0.124025 0.003896</acceleration>
+          <wrench>0.043051 -0.038908 0.11971 0 -0 0</wrench>
         </link>
         <link name='robot_front_ptz_camera_pan_link'>
-          <pose frame=''>0.116303 -0.03419 0.306693 -0.023861 0.260738 -0.106592</pose>
-          <velocity>1.2e-05 -8e-06 1.7e-05 0.258771 0.003364 0.961081</velocity>
-          <acceleration>0.01239 -0.007973 0.017472 1.74715 -0.438012 -2.8486</acceleration>
-          <wrench>0.001239 -0.000797 0.001747 0 -0 0</wrench>
+          <pose frame=''>0.424774 0.97856 0.306693 -0.023975 0.260728 -0.176615</pose>
+          <velocity>1.2e-05 -6e-06 2.7e-05 0.258375 -0.014729 0.961092</velocity>
+          <acceleration>0.011658 -0.005837 0.026775 1.3558 -1.33035 -2.84309</acceleration>
+          <wrench>0.001166 -0.000584 0.002678 0 -0 0</wrench>
         </link>
         <link name='robot_front_ptz_camera_tilt_link'>
-          <pose frame=''>0.116303 -0.03419 0.306693 -1.59534 0.34911 -0.108833</pose>
-          <velocity>1.2e-05 -8e-06 1.7e-05 0.158176 -0.991293 0.984264</velocity>
-          <acceleration>0.01239 -0.007973 0.017472 -0.729356 -0.333228 -1.9784</acceleration>
-          <wrench>0.003717 -0.002392 0.005241 0 -0 0</wrench>
+          <pose frame=''>0.424774 0.97856 0.306693 -1.59545 0.348428 -0.178849</pose>
+          <velocity>1.2e-05 -6e-06 2.7e-05 0.088465 -0.999913 0.984385</velocity>
+          <acceleration>0.011658 -0.005837 0.026775 -2.55984 0.373879 1.27307</acceleration>
+          <wrench>0.003497 -0.001751 0.008033 0 -0 0</wrench>
         </link>
         <link name='robot_front_right_wheel'>
-          <pose frame=''>0.156943 -0.269795 0.109993 -3.1415 -1.48045 3.12722</pose>
-          <velocity>-1.1e-05 -5e-06 -0 3.4e-05 4.6e-05 -6.1e-05</velocity>
-          <acceleration>-0.010724 -0.00508 -0.000187 0.033498 0.046299 -0.061118</acceleration>
-          <wrench>-0.069707 -0.033019 -0.001218 0 -0 0</wrench>
+          <pose frame=''>0.448936 0.7407 0.109993 3.14159 -0.498461 3.05773</pose>
+          <velocity>-0 -6e-06 2.4e-05 4.8e-05 -0.000119 -2.9e-05</velocity>
+          <acceleration>-0.000242 -0.006418 0.024355 0.050079 -0.119841 -0.029176</acceleration>
+          <wrench>-0.001572 -0.041717 0.15831 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
@@ -1002,87 +1012,11 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-5.96885 -1.77082 11.0174 0 0.819033 0.034217</pose>
+        <pose frame=''>-15.4356 -7.38434 21.7754 0 0.82303 0.318219</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
-    <model name='bus'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <scale>0.01 0.01 0.01</scale>
-              <uri>model://bus/meshes/bus.obj</uri>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <scale>0.01 0.01 0.01</scale>
-              <uri>model://bus/meshes/bus.obj</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose frame=''>-2.97832 7.04231 0 0 -0 0</pose>
-    </model>
-    <model name='bus_0'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <scale>0.01 0.01 0.01</scale>
-              <uri>model://bus/meshes/bus.obj</uri>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <scale>0.01 0.01 0.01</scale>
-              <uri>model://bus/meshes/bus.obj</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose frame=''>-2.79759 -7.47342 0 0 -0 0</pose>
-    </model>
     <model name='bus_1'>
       <static>1</static>
       <link name='link'>
@@ -1120,6 +1054,920 @@
         <kinematic>0</kinematic>
       </link>
       <pose frame=''>9.89695 -0.588254 0 0 -0 0</pose>
+    </model>
+    <model name='bus_stop'>
+      <link name='base_link'>
+        <inertial>
+          <pose frame=''>-0.028945 0.578968 0.865497 0 -0 0</pose>
+          <mass>599.322</mass>
+          <inertia>
+            <ixx>1541.97</ixx>
+            <ixy>-12.6703</ixy>
+            <ixz>1.60713</ixz>
+            <iyy>1635.91</iyy>
+            <iyz>370.745</iyz>
+            <izz>1773.29</izz>
+          </inertia>
+        </inertial>
+        <collision name='base_link_collision'>
+          <pose frame=''>0 0 0.12 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/base_link.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__bench_collision_1'>
+          <pose frame=''>-0.68039 -0.585 0.76 -1.5708 -0 -3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/bench.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__board_collision_2'>
+          <pose frame=''>-1.5 -0.022169 2.9407 -1.5708 -0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.82 0.266 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__glass1_collision_3'>
+          <pose frame=''>1.49 -0.005 1.34 -3.14159 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__glass2_collision_4'>
+          <pose frame=''>0.755 -0.76 1.34 3.14159 -0 -3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__glass3_collision_5'>
+          <pose frame=''>-0.745 -0.74 1.34 -3.14159 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__glass4_collision_6'>
+          <pose frame=''>-1.49 -0.005 1.34 -3.14159 -0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__head_collision_7'>
+          <pose frame=''>0 0 2.64 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/head.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__round1_collision_8'>
+          <pose frame=''>1.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__round2_collision_9'>
+          <pose frame=''>0.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__round3_collision_10'>
+          <pose frame=''>-0.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__round4_collision_11'>
+          <pose frame=''>-1.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__tag_collision_12'>
+          <pose frame=''>-1.73 0 2.69 -1.5708 -0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.39 0.087 0.002</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='base_link_visual'>
+          <pose frame=''>0 0 0.12 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/base_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__bench_visual_1'>
+          <pose frame=''>-0.68039 -0.585 0.76 -1.5708 -0 -3.14159</pose>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/bench.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__board_visual_2'>
+          <cast_shadows>0</cast_shadows>
+          <pose frame=''>-1.5 -0.022169 2.9407 -1.5708 -0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.82 0.266 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://bus_stop/materials/scripts</uri>
+              <uri>model://bus_stop/materials/textures</uri>
+              <name>bus/station</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__glass1_visual_3'>
+          <pose frame=''>1.49 -0.005 1.34 -3.14159 -0 1.5708</pose>
+          <transparency>0.7</transparency>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__glass2_visual_4'>
+          <pose frame=''>0.755 -0.76 1.34 3.14159 -0 -3.14159</pose>
+          <transparency>0.7</transparency>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__glass3_visual_5'>
+          <pose frame=''>-0.745 -0.74 1.34 -3.14159 0 0</pose>
+          <transparency>0.7</transparency>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__glass4_visual_6'>
+          <pose frame=''>-1.49 -0.005 1.34 -3.14159 -0 -1.5708</pose>
+          <transparency>0.7</transparency>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__head_visual_7'>
+          <pose frame=''>0 0 2.64 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/head.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__round1_visual_8'>
+          <pose frame=''>1.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__round2_visual_9'>
+          <pose frame=''>0.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__round3_visual_10'>
+          <pose frame=''>-0.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__round4_visual_11'>
+          <pose frame=''>-1.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__tag_visual_12'>
+          <pose frame=''>-1.73 0 2.69 -1.5708 -0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.39 0.087 0.002</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://bus_stop/materials/scripts</uri>
+              <uri>model://bus_stop/materials/textures</uri>
+              <name>bus/tag</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-0.057497 2.99009 0 0 -0 0</pose>
+    </model>
+    <model name='bus_stop_0'>
+      <link name='base_link'>
+        <inertial>
+          <pose frame=''>-0.028945 0.578968 0.865497 0 -0 0</pose>
+          <mass>599.322</mass>
+          <inertia>
+            <ixx>1541.97</ixx>
+            <ixy>-12.6703</ixy>
+            <ixz>1.60713</ixz>
+            <iyy>1635.91</iyy>
+            <iyz>370.745</iyz>
+            <izz>1773.29</izz>
+          </inertia>
+        </inertial>
+        <collision name='base_link_collision'>
+          <pose frame=''>0 0 0.12 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/base_link.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__bench_collision_1'>
+          <pose frame=''>-0.68039 -0.585 0.76 -1.5708 -0 -3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/bench.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__board_collision_2'>
+          <pose frame=''>-1.5 -0.022169 2.9407 -1.5708 -0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.82 0.266 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__glass1_collision_3'>
+          <pose frame=''>1.49 -0.005 1.34 -3.14159 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__glass2_collision_4'>
+          <pose frame=''>0.755 -0.76 1.34 3.14159 -0 -3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__glass3_collision_5'>
+          <pose frame=''>-0.745 -0.74 1.34 -3.14159 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__glass4_collision_6'>
+          <pose frame=''>-1.49 -0.005 1.34 -3.14159 -0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__head_collision_7'>
+          <pose frame=''>0 0 2.64 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/head.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__round1_collision_8'>
+          <pose frame=''>1.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__round2_collision_9'>
+          <pose frame=''>0.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__round3_collision_10'>
+          <pose frame=''>-0.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__round4_collision_11'>
+          <pose frame=''>-1.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__tag_collision_12'>
+          <pose frame=''>-1.73 0 2.69 -1.5708 -0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.39 0.087 0.002</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='base_link_visual'>
+          <pose frame=''>0 0 0.12 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/base_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__bench_visual_1'>
+          <pose frame=''>-0.68039 -0.585 0.76 -1.5708 -0 -3.14159</pose>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/bench.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__board_visual_2'>
+          <cast_shadows>0</cast_shadows>
+          <pose frame=''>-1.5 -0.022169 2.9407 -1.5708 -0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.82 0.266 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://bus_stop/materials/scripts</uri>
+              <uri>model://bus_stop/materials/textures</uri>
+              <name>bus/station</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__glass1_visual_3'>
+          <pose frame=''>1.49 -0.005 1.34 -3.14159 -0 1.5708</pose>
+          <transparency>0.7</transparency>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__glass2_visual_4'>
+          <pose frame=''>0.755 -0.76 1.34 3.14159 -0 -3.14159</pose>
+          <transparency>0.7</transparency>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__glass3_visual_5'>
+          <pose frame=''>-0.745 -0.74 1.34 -3.14159 0 0</pose>
+          <transparency>0.7</transparency>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__glass4_visual_6'>
+          <pose frame=''>-1.49 -0.005 1.34 -3.14159 -0 -1.5708</pose>
+          <transparency>0.7</transparency>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/glass.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__head_visual_7'>
+          <pose frame=''>0 0 2.64 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/head.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__round1_visual_8'>
+          <pose frame=''>1.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__round2_visual_9'>
+          <pose frame=''>0.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__round3_visual_10'>
+          <pose frame=''>-0.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__round4_visual_11'>
+          <pose frame=''>-1.5 0 2.64 1.57079 7e-06 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://bus_stop/meshes/round.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__tag_visual_12'>
+          <pose frame=''>-1.73 0 2.69 -1.5708 -0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.39 0.087 0.002</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://bus_stop/materials/scripts</uri>
+              <uri>model://bus_stop/materials/textures</uri>
+              <name>bus/tag</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-0.048561 -2.18678 0 0 -0 0</pose>
+    </model>
+    <model name='fire_hydrant'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://fire_hydrant/meshes/fire_hydrant.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://fire_hydrant/meshes/fire_hydrant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-3.00113 0.882214 0 0 -0 0</pose>
     </model>
   </world>
 </sdf>

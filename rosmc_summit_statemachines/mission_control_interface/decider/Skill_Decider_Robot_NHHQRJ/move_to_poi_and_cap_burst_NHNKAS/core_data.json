@@ -7,7 +7,10 @@
         "3": 0.0, 
         "4": 0.0, 
         "5": 0.0, 
-        "6": 0.0
+        "6": 0.0, 
+        "7": 0, 
+        "8": 0, 
+        "9": 0
     }, 
     "library_name": "move_to_poi_and_cap_burst", 
     "library_path": "mission_control_interface/robot_skills", 
@@ -38,7 +41,10 @@
         "3": true, 
         "4": true, 
         "5": true, 
-        "6": true
+        "6": true, 
+        "7": true, 
+        "8": true, 
+        "9": true
     }, 
     "use_runtime_value_output_data_ports": {}, 
     "version": "0.1"

@@ -4,7 +4,35 @@
     "income": {
         "__jsonqualname__": "rafcon.core.state_elements.logical_port.Income"
     }, 
-    "input_data_ports": {}, 
+    "input_data_ports": {
+        "1": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 1, 
+            "data_type": {
+                "__type__": "__builtin__.int"
+            }, 
+            "default_value": 0, 
+            "name": "frontcam"
+        }, 
+        "2": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 2, 
+            "data_type": {
+                "__type__": "__builtin__.int"
+            }, 
+            "default_value": 0, 
+            "name": "rightcam"
+        }, 
+        "3": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 3, 
+            "data_type": {
+                "__type__": "__builtin__.int"
+            }, 
+            "default_value": 0, 
+            "name": "leftcam"
+        }
+    }, 
     "name": "cap_burst", 
     "outcomes": {
         "-2": {
