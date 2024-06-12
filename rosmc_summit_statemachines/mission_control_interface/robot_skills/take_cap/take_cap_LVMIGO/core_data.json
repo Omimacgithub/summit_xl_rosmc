@@ -14,15 +14,6 @@
             "default_value": 0, 
             "name": "frontcam"
         }, 
-        "1": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
-            "data_port_id": 1, 
-            "data_type": {
-                "__type__": "__builtin__.str"
-            }, 
-            "default_value": "\"\"", 
-            "name": "frontcam_filename"
-        }, 
         "3": {
             "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
             "data_port_id": 3, 
@@ -40,24 +31,6 @@
             }, 
             "default_value": 0, 
             "name": "leftcam"
-        }, 
-        "5": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
-            "data_port_id": 5, 
-            "data_type": {
-                "__type__": "__builtin__.str"
-            }, 
-            "default_value": "\"\"", 
-            "name": "rightcam_filename"
-        }, 
-        "6": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
-            "data_port_id": 6, 
-            "data_type": {
-                "__type__": "__builtin__.str"
-            }, 
-            "default_value": "\"\"", 
-            "name": "leftcam_filename"
         }
     }, 
     "name": "take_cap", 

@@ -29,14 +29,11 @@ mapping:
 
 take_cap:
   - mode: build_up
-    group: somthing
+    group: cams
     members:
       - frontcam
-      - frontcam_filename
       - leftcam
-      - leftcam_filename
       - rightcam
-      - rightcam_filename
 
 move_to_poi_and_cap_burst:
   - mode: build_up

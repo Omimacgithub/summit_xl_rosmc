@@ -52,7 +52,7 @@
         "7": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 7, 
-            "from_key": 2, 
+            "from_key": 1, 
             "from_state": "ELDPZZ", 
             "to_key": 4, 
             "to_state": "LQNODY"
@@ -132,7 +132,7 @@
         "17": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 17, 
-            "from_key": 8, 
+            "from_key": 2, 
             "from_state": "ELDPZZ", 
             "to_key": 3, 
             "to_state": "LQNODY"

@@ -15,9 +15,13 @@ roslaunch rosmc_3d_gui 3d_gui.launch &
 #EXPORT ~/.local/bin to $PATH (for RAFCON)
 export PATH="$HOME/.local/bin:$PATH"
 #RAFCON statemachine (inside GUI, launch with play button)
+sleep 2
 SM_DIR=$HOME/catkin_ws/src/summit_xl_rosmc/rosmc_summit_statemachines; ROS_NAMESPACE=summit_xl rafcon -c $SM_DIR/config.yaml -o $SM_DIR/modules/mission_control/mission_executor/mission_executor &
 #Load map
 ROS_NAMESPACE=robot roslaunch summit_xl_localization map_server.launch prefix:=robot_ map_file:=empty/map_empty.yaml &
 #Image view node (front camera)
+#Wait for cams
 sleep 5
-rosrun --debug image_view image_saver image:=/robot/front_rgbd_camera/rgb/image_raw _image_transport:=compressed _request_start_end:=true  _filename_format:=$HOME/shots/front$(date +%F-%R)/%04d.%s __name:=front_saver &
+rosrun image_view image_saver image:=/robot/front_rgbd_camera/rgb/image_raw _image_transport:=compressed _request_start_end:=true  _filename_format:=$HOME/shots/front$(date +%F-%R)/%04d.%s __name:=front_saver &
+#Single shot
+rosrun image_view image_saver image:=/robot/front_rgbd_camera/rgb/image_raw _image_transport:=compressed _save_all_image:=false  _filename_format:=$HOME/shots/frontsingleshots$(date +%F-%R)/%04d.%s __name:=front_save &
