@@ -31,6 +31,7 @@ def execute(self, inputs, outputs, gvm):
         goal.target_pose.pose = pose(inputs)
 	#Sending goal
         client.send_goal(goal)
+        gvm.set_variable("clase", client, per_reference=True)
         client.wait_for_result()
         state = client.get_state()
         
@@ -40,3 +41,5 @@ def execute(self, inputs, outputs, gvm):
             return "aborted"
     except rospy.ROSInterruptException:
         return "aborted"
+    finally:
+        gvm.delete_variable("clase")

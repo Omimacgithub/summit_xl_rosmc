@@ -10,12 +10,17 @@ move_to_poi:
       - z_ori
       - w_ori
 
-acsion:
-  - mode: break_down  # break_down mode: expand input parameters into elements
-    group: dicto  # this must be the same as the parameter used in Mission.srv
-    #members:
-    #  - x_pos
-    type: dict
+move_to_poi_with_cancel:
+  - mode: build_up
+    group: pous
+    members:
+      - x_pos
+      - y_pos
+      - z_pos
+      - x_ori
+      - y_ori
+      - z_ori
+      - w_ori
 
 mapping:
   - mode: break_down  # break_down mode: expand input parameters into elements

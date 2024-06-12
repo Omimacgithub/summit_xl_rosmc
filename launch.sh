@@ -14,6 +14,8 @@ roslaunch rosmc_3d_gui 3d_gui.launch &
 export PATH="$HOME/.local/bin:$PATH"
 #RAFCON statemachine (inside GUI, launch with play button)
 SM_DIR=$HOME/catkin_ws/src/summit_xl_rosmc/rosmc_summit_statemachines; ROS_NAMESPACE=summit_xl rafcon -c $SM_DIR/config.yaml -o $SM_DIR/modules/mission_control/mission_executor/mission_executor &
+#Wait for cameras
+#sleep 4
 #Image view node (front camera)
 #rosrun image_view image_saver image:=/robot/front_rgbd_camera/rgb/image_raw _request_start_end:=true  _filename_format:=$HOME/shots/front$(date +%F-%R)/%04d.%s __name:=front_saver &
 #Image view node (front camera for a single shot)

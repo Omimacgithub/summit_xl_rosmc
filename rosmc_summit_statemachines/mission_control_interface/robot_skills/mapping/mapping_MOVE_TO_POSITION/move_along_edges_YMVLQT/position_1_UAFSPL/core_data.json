@@ -6,24 +6,24 @@
             "data_flow_id": 1, 
             "from_key": 1, 
             "from_state": "UAFSPL", 
-            "to_key": 7, 
-            "to_state": "CKDPKZ"
+            "to_key": 6, 
+            "to_state": "EFHTFD"
         }, 
         "2": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 2, 
             "from_key": 0, 
             "from_state": "UAFSPL", 
-            "to_key": 6, 
-            "to_state": "CKDPKZ"
+            "to_key": 5, 
+            "to_state": "EFHTFD"
         }, 
         "3": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 3, 
             "from_key": 2, 
             "from_state": "UAFSPL", 
-            "to_key": 0, 
-            "to_state": "CKDPKZ"
+            "to_key": 1, 
+            "to_state": "EFHTFD"
         }
     }, 
     "description": null, 
@@ -84,7 +84,7 @@
         "1": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": -1, 
-            "from_state": "CKDPKZ", 
+            "from_state": "EFHTFD", 
             "to_outcome": -1, 
             "to_state": "UAFSPL", 
             "transition_id": 1
@@ -92,7 +92,7 @@
         "8": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 
-            "from_state": "CKDPKZ", 
+            "from_state": "EFHTFD", 
             "to_outcome": 0, 
             "to_state": "UAFSPL", 
             "transition_id": 8
@@ -102,7 +102,7 @@
             "from_outcome": null, 
             "from_state": null, 
             "to_outcome": null, 
-            "to_state": "CKDPKZ", 
+            "to_state": "EFHTFD", 
             "transition_id": 9
         }
     }

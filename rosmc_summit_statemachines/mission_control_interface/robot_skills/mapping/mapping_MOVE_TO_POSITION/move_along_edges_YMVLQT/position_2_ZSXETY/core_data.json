@@ -6,32 +6,32 @@
             "data_flow_id": 4, 
             "from_key": 1, 
             "from_state": "ZSXETY", 
-            "to_key": 7, 
-            "to_state": "MSXJQK"
+            "to_key": 6, 
+            "to_state": "IFXARR"
         }, 
         "5": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 5, 
             "from_key": 0, 
             "from_state": "ZSXETY", 
-            "to_key": 6, 
-            "to_state": "MSXJQK"
+            "to_key": 5, 
+            "to_state": "IFXARR"
         }, 
         "6": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 6, 
             "from_key": 3, 
             "from_state": "ZSXETY", 
-            "to_key": 1, 
-            "to_state": "MSXJQK"
+            "to_key": 0, 
+            "to_state": "IFXARR"
         }, 
         "7": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 7, 
             "from_key": 5, 
             "from_state": "ZSXETY", 
-            "to_key": 0, 
-            "to_state": "MSXJQK"
+            "to_key": 1, 
+            "to_state": "IFXARR"
         }
     }, 
     "description": null, 
@@ -103,13 +103,13 @@
             "from_outcome": null, 
             "from_state": null, 
             "to_outcome": null, 
-            "to_state": "MSXJQK", 
+            "to_state": "IFXARR", 
             "transition_id": 4
         }, 
         "5": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 
-            "from_state": "MSXJQK", 
+            "from_state": "IFXARR", 
             "to_outcome": 0, 
             "to_state": "ZSXETY", 
             "transition_id": 5
@@ -117,7 +117,7 @@
         "6": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": -1, 
-            "from_state": "MSXJQK", 
+            "from_state": "IFXARR", 
             "to_outcome": -1, 
             "to_state": "ZSXETY", 
             "transition_id": 6

@@ -175,6 +175,11 @@
             "name": "aborted", 
             "outcome_id": -1
         }, 
+        "0": {
+            "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
+            "name": "move_to_poi_with_cancel", 
+            "outcome_id": 0
+        }, 
         "1": {
             "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
             "name": "take_cap", 
@@ -382,6 +387,14 @@
             "to_outcome": 8, 
             "to_state": "ELDPZZ", 
             "transition_id": 13
+        }, 
+        "14": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 4, 
+            "from_state": "LHWKNS", 
+            "to_outcome": 0, 
+            "to_state": "ELDPZZ", 
+            "transition_id": 14
         }, 
         "26": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 

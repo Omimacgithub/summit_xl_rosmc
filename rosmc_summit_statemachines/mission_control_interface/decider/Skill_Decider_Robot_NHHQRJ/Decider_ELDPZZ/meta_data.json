@@ -127,6 +127,19 @@
             }
         }
     }, 
+    "outcome0": {
+        "gui": {
+            "editor_gaphas": {
+                "rel_pos": {
+                    "__jsonqualname__": "__builtin__.tuple", 
+                    "items": [
+                        15.380094141717938, 
+                        8.920454602196404
+                    ]
+                }
+            }
+        }
+    }, 
     "outcome1": {
         "gui": {
             "editor_gaphas": {
@@ -386,6 +399,13 @@
         "gui": {
             "editor_gaphas": {
                 "waypoints": []
+            }
+        }
+    }, 
+    "transition14": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
             }
         }
     }, 
