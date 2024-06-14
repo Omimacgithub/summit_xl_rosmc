@@ -27,7 +27,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: LaserScan
+    SyncSource: ""
   - Class: rosmc_status_monitor/CameraPosePublisherPanel
     Name: CameraPosePublisherPanel
   - Class: teleop_panel/Teleop
@@ -148,59 +148,33 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        robot_front_laser_base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        robot_front_laser_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
         robot_front_left_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot_front_ptz_camera_base_link:
+        robot_front_rgbd_camera_base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot_front_ptz_camera_frame_link:
+        robot_front_rgbd_camera_camera_center:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot_front_ptz_camera_optical_frame_link:
+        robot_front_rgbd_camera_left_camera_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot_front_ptz_camera_pan_link:
+        robot_front_rgbd_camera_left_camera_optical_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot_front_ptz_camera_tilt_link:
+        robot_front_rgbd_camera_right_camera_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot_front_rgbd_camera_depth_frame:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot_front_rgbd_camera_depth_optical_frame:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot_front_rgbd_camera_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        robot_front_rgbd_camera_rgb_frame:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot_front_rgbd_camera_rgb_optical_frame:
+        robot_front_rgbd_camera_right_camera_optical_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -224,6 +198,15 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        robot_top_3d_laser_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot_top_3d_laser_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
       Name: RobotModel
       Robot Description: robot/robot_description
       TF Prefix: ""
@@ -387,6 +370,12 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        mm_robot_docking_station_1:
+          Value: true
+        mm_robot_docking_station_laser:
+          Value: true
+        robot_ar_marker_1:
+          Value: true
         robot_back_left_wheel:
           Value: false
         robot_back_right_wheel:
@@ -397,31 +386,27 @@ Visualization Manager:
           Value: false
         robot_base_link:
           Value: false
-        robot_front_laser_base_link:
+        robot_docking_station_marker:
           Value: true
-        robot_front_laser_link:
+        robot_docking_station_marker_contact:
+          Value: true
+        robot_docking_station_marker_for_base_frame:
           Value: true
         robot_front_left_wheel:
           Value: false
-        robot_front_ptz_camera_base_link:
+        robot_front_rgbd_camera_base_link:
           Value: true
-        robot_front_ptz_camera_frame_link:
+        robot_front_rgbd_camera_camera_center:
           Value: true
-        robot_front_ptz_camera_optical_frame_link:
+        robot_front_rgbd_camera_imu_link:
           Value: true
-        robot_front_ptz_camera_pan_link:
+        robot_front_rgbd_camera_left_camera_frame:
           Value: true
-        robot_front_ptz_camera_tilt_link:
+        robot_front_rgbd_camera_left_camera_optical_frame:
           Value: true
-        robot_front_rgbd_camera_depth_frame:
+        robot_front_rgbd_camera_right_camera_frame:
           Value: true
-        robot_front_rgbd_camera_depth_optical_frame:
-          Value: true
-        robot_front_rgbd_camera_link:
-          Value: true
-        robot_front_rgbd_camera_rgb_frame:
-          Value: true
-        robot_front_rgbd_camera_rgb_optical_frame:
+        robot_front_rgbd_camera_right_camera_optical_frame:
           Value: true
         robot_front_right_wheel:
           Value: false
@@ -435,7 +420,11 @@ Visualization Manager:
           Value: true
         robot_odom:
           Value: true
-        utm:
+        robot_top_3d_laser_base_link:
+          Value: true
+        robot_top_3d_laser_link:
+          Value: true
+        robotnik_move_base_last_current_goal:
           Value: true
       Marker Scale: 1
       Name: TF
@@ -443,7 +432,17 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
+        robot_ar_marker_1:
+          robot_docking_station_marker:
+            robot_docking_station_marker_contact:
+              {}
+            robot_docking_station_marker_for_base_frame:
+              {}
         robot_map:
+          mm_robot_docking_station_1:
+            {}
+          mm_robot_docking_station_laser:
+            {}
           robot_odom:
             robot_base_footprint:
               robot_base_link:
@@ -453,24 +452,18 @@ Visualization Manager:
                   {}
                 robot_base_docking_contact_link:
                   {}
-                robot_front_laser_base_link:
-                  robot_front_laser_link:
-                    {}
                 robot_front_left_wheel:
                   {}
-                robot_front_ptz_camera_base_link:
-                  robot_front_ptz_camera_pan_link:
-                    robot_front_ptz_camera_tilt_link:
-                      robot_front_ptz_camera_frame_link:
-                        robot_front_ptz_camera_optical_frame_link:
-                          {}
-                robot_front_rgbd_camera_link:
-                  robot_front_rgbd_camera_depth_frame:
-                    robot_front_rgbd_camera_depth_optical_frame:
-                      {}
-                  robot_front_rgbd_camera_rgb_frame:
-                    robot_front_rgbd_camera_rgb_optical_frame:
-                      {}
+                robot_front_rgbd_camera_base_link:
+                  robot_front_rgbd_camera_camera_center:
+                    robot_front_rgbd_camera_left_camera_frame:
+                      robot_front_rgbd_camera_imu_link:
+                        {}
+                      robot_front_rgbd_camera_left_camera_optical_frame:
+                        {}
+                    robot_front_rgbd_camera_right_camera_frame:
+                      robot_front_rgbd_camera_right_camera_optical_frame:
+                        {}
                 robot_front_right_wheel:
                   {}
                 robot_gps_mast_base_link:
@@ -478,7 +471,10 @@ Visualization Manager:
                     {}
                 robot_imu_link:
                   {}
-          utm:
+                robot_top_3d_laser_base_link:
+                  robot_top_3d_laser_link:
+                    {}
+          robotnik_move_base_last_current_goal:
             {}
       Update Interval: 0
       Value: true
@@ -523,25 +519,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 11.808002471923828
+      Distance: 2.7197375297546387
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.6840509176254272
-        Y: 0.0996747836470604
-        Z: 0.02564687840640545
+        X: 0.9866564869880676
+        Y: -1.1763412952423096
+        Z: 4.809206962585449
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.46479687094688416
+      Pitch: 0.834798276424408
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.269066333770752
+      Yaw: 3.3840384483337402
     Saved: ~
 Window Geometry:
   Camera:
