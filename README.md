@@ -6,4 +6,9 @@ This repo contains a demo of the Robotnik Summit-XL working with a high-level mi
 
 Add this repo to your catkin_ws.
 
+~~~shell
+git clone https://github.com/Omimacgithub/summit_xl_rosmc.git
+catkin build rosmc
+~~~
+
 The repository is structured into the following directories:

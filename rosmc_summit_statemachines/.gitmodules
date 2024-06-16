@@ -1,6 +1,0 @@
-[submodule "modules/mission_control"]
-	path = modules/mission_control
-	url = https://github.com/DLR-RM/mission_control_rafcon_statemachines.git
-[submodule "modules/ros"]
-	path = modules/ros
-	url = https://github.com/DLR-RM/RAFCON-ros-state-machines.git
