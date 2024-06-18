@@ -13,6 +13,6 @@ git clone https://github.com/Omimacgithub/summit_xl_rosmc.git
 catkin build rosmc
 ~~~
 
-## Video demos
-
-- [YT playlist](https://www.youtube.com/playlist?list=PLtkrT12EU5nXhh0LXnHXoR5eReIP0TPGB)
+## Demos
+- Simulations: [YT playlist](https://www.youtube.com/playlist?list=PLtkrT12EU5nWiCNHojNHtxvTQV09KULYj)
+- Real: [YT playlist](https://www.youtube.com/playlist?list=PLtkrT12EU5nXhh0LXnHXoR5eReIP0TPGB)
