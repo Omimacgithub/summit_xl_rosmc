@@ -1,0 +1,40 @@
+---
+version: "3.7"
+services:
+  base:
+    image: lamadre 
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["/bin/bash"]
+    network_mode: "host"
+    stdin_open: true
+    tty: true
+    privileged: true
+    stop_signal: SIGINT
+    environment:
+      PATH: "/home/robot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      ROS_MASTER_URI: "http://localhost:11311"
+      GAZEBO_MASTER_URI: "http://localhost:11345"
+      DISPLAY: $DISPLAY
+      QT_X11_NO_MITSHM: 1
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIE: graphics
+      LIBGL_ALWAYS_INDIRECT: 0
+      ROS_BU_PKG: "summit_xl_sim_bringup"
+      ROS_BU_LAUNCH: "summit_xl_complete.launch"
+      LAUNCH_ROSBRIDGE: "true"
+    volumes:
+      - type: bind
+        source: /tmp/.X11-unix
+        target: /tmp/.X11-unix
+    devices:
+      - "/dev/dri"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

@@ -1,0 +1,2 @@
+qdarkstyle==2.8.1
+rafcon==0.15.4
