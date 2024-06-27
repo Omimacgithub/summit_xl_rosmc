@@ -1,6 +1,4 @@
 #docker run --name prueba3 --rm -ti -v /tmp/.X11-unix:/tmp/.X11-unix fail bash
-#TODO: Meter la imagen en un docker-compose
-#TODO: rviz_satellite
 #X display: https://gursimarsm.medium.com/run-gui-applications-in-a-docker-container-ca625bad4638
 FROM robotnik/summit-xl-sim:melodic-devel
 USER 0
@@ -19,9 +17,13 @@ RUN pip install --upgrade pip setuptools \
 	&& pip install -r requirements.txt --user 
 WORKDIR $CK_DIR/src
 RUN git clone https://github.com/DLR-RM/rosmc_interface_msgs.git \
-	&& git clone https://github.com/Omimacgithub/summit_xl_rosmc.git
+	&& git clone https://github.com/Omimacgithub/summit_xl_rosmc.git \
+	&& git clone --branch ros1 https://github.com/nobleo/rviz_satellite.git
 WORKDIR $CK_DIR
 RUN source devel/setup.bash \
-	&& catkin_make summit_xl_rosmc/rosmc \
+	&& catkin_make summit_xl_rosmc/rosmc rviz_satellite \
 	&& catkin_make install \
 	&& source devel/setup.bash
+#RAFCON config file
+COPY config.py /home/robot/.local/lib/python2.7/site-packages/yaml_configuration/config.py
+CMD /bin/bash

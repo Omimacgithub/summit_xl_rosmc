@@ -1,13 +1,10 @@
 ---
-version: "3.7"
 services:
   base:
-    image: lamadre 
+    image: rosmc 
     build:
       context: .
       dockerfile: Dockerfile
-    entrypoint: ["/bin/sh", "-c"]
-    command: ["/bin/bash"]
     network_mode: "host"
     stdin_open: true
     tty: true
