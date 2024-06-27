@@ -40,37 +40,13 @@ docker exec -it 2q-base-1 bash
 
 ## Using outdoors localization (only simulation):
 
-You need to edit the file **summit_xl_complete.launch** as follows:
-~~~shell
-nano ~/catkin_ws/src/summit_xl_sim_bringup/launch/summit_xl_complete.launch
-~~~
-<img width="413" alt="imagen" src="https://github.com/Omimacgithub/summit_xl_rosmc/assets/90336442/30918c7d-be69-4fc9-9ec1-3a4f64316c70">
-<img width="655" alt="imagen" src="https://github.com/Omimacgithub/summit_xl_rosmc/assets/90336442/39772168-44e3-455b-beaf-4bff29e752b3">
-
-
-Copy ekf localization files:
-~~~shell
-cp ~/catkin_ws/src/summit_xl_rosmc/resources/gps_localization/navsat_transform_node.launch ~/catkin_ws/src/summit_xl_rosmc/resources/gps_localization/robot_localization_world.launch ~/catkin_ws/src/summit_xl_localization/launch/
-~~~
-
 Uncomment the blank_map line on launch:
 ~~~shell
 nano ~/catkin_ws/src/summit_xl_rosmc/simlaunch.sh
 ~~~
 <img width="714" alt="imagen" src="https://github.com/Omimacgithub/summit_xl_rosmc/assets/90336442/663464ee-2e83-49d0-8ce9-d1016fa85f96">
 
-
-Load any of the outdoor gazebo worlds:
-~~~shell
-cp ~/catkin_ws/src/summit_xl_rosmc/resources/gazebo_worlds/mission2.world ~/catkin_ws/src/summit_xl_gazebo/worlds/
-nano ~/catkin_ws/src/summit_xl_sim_bringup/launch/summit_xl_complete.launch
-~~~
-<img width="507" alt="imagen" src="https://github.com/Omimacgithub/summit_xl_rosmc/assets/90336442/0907ecde-d842-449d-86c3-7a438f4529a6">
-
-Copy the blank map:
-~~~shell
-cp ~/catkin_ws/src/summit_xl_rosmc/resources/blank_map.pgm ~/catkin_ws/src/summit_xl_common/summit_xl_localization/maps/empty/map_empty.pgm
-~~~
+Also comment the launch line for indoors and uncomment the launch line for outdoors.
 
 Comment the following line on **robot_localization_complete.launch**:
 ~~~shell
