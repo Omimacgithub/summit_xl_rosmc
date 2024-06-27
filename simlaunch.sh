@@ -5,8 +5,10 @@ sleep 2
 #Task marker servers
 roslaunch rosmc_task_marker_server all_task_marker_server.launch &
 sleep 1
-#Launch summit_xl_sim
-roslaunch summit_xl_sim_bringup summit_xl_complete.launch launch_rviz:=false & #gazebo_gui:=false &
+#Launch indoor summit_xl_sim
+#roslaunch summit_xl_sim_bringup summit_xl_complete.launch launch_rviz:=false & #gazebo_gui:=false &
+#Launch outdoor summit_xl_sim
+roslaunch summit_xl_sim_bringup summit_xl_complete.launch launch_rviz:=false gazebo_gui:=false gazebo_world:=/home/robot/catkin_ws/src/summit_xl_rosmc/resources/gazebo_worlds/mission2.world amcl_and_mapserver_a:=false ekf_localization_robot_a:=true &
 #Frontend tools
 #rosmc mission commander
 ROS_NAMESPACE=mission_control rosrun rosmc_command_gui rosmc_command_gui register_to_mission_server:=/mission_control/register_to_mission_server &
@@ -17,8 +19,8 @@ export PATH="$HOME/.local/bin:$PATH"
 #RAFCON statemachine (inside GUI, launch with play button)
 sleep 2
 SM_DIR=$HOME/catkin_ws/src/summit_xl_rosmc/rosmc_summit_statemachines; ROS_NAMESPACE=summit_xl rafcon -c $SM_DIR/config.yaml -o $SM_DIR/modules/mission_control/mission_executor/mission_executor &
-#Load empty map (if you are using amcl, comment this line)
-#ROS_NAMESPACE=robot roslaunch summit_xl_localization map_server.launch prefix:=robot_ map_file:=empty/map_empty.yaml &
+#Load empty map (if you are using amcl (indoors), comment this line)
+ROS_NAMESPACE=robot roslaunch summit_xl_localization map_server.launch prefix:=robot_ map_file:=empty/map_empty.yaml &
 #Image view node (front camera)
 #Wait for cams
 sleep 5
