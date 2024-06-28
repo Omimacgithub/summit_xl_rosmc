@@ -8,7 +8,7 @@ sleep 1
 #Launch indoor summit_xl_sim
 #roslaunch summit_xl_sim_bringup summit_xl_complete.launch launch_rviz:=false & #gazebo_gui:=false &
 #Launch outdoor summit_xl_sim
-roslaunch summit_xl_sim_bringup summit_xl_complete.launch launch_rviz:=false gazebo_gui:=false gazebo_world:=/home/robot/catkin_ws/src/summit_xl_rosmc/resources/gazebo_worlds/mission2.world amcl_and_mapserver_a:=false ekf_localization_robot_a:=true &
+roslaunch summit_xl_sim_bringup summit_xl_complete.launch launch_rviz:=false gazebo_gui:=false gazebo_world:=/home/robot/catkin_ws/src/summit_xl_gazebo/worlds/mission2.world amcl_and_mapserver_a:=false ekf_localization_robot_a:=true &
 #Frontend tools
 #rosmc mission commander
 ROS_NAMESPACE=mission_control rosrun rosmc_command_gui rosmc_command_gui register_to_mission_server:=/mission_control/register_to_mission_server &
