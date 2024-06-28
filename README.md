@@ -17,7 +17,7 @@ git clone https://github.com/Omimacgithub/summit_xl_rosmc.git
 catkin build rosmc
 ~~~
 
-To start rosmc on simulation:
+To start rosmc on simulation (by default this .sh is set for outdoor missions, see below how to set up outdoors localization before launching this file):
 ~~~shell
 chmod +x simlaunch.sh
 ./simlaunch.sh
