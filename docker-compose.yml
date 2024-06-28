@@ -1,7 +1,8 @@
 ---
 services:
   base:
-    image: rosmc 
+    image: rosmc
+    container_name: rosmc-base
     build:
       context: .
       dockerfile: Dockerfile
