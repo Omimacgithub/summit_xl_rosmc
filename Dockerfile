@@ -1,5 +1,4 @@
-# START OF SUMMIT_XL_SIM_DOCKERFILE
-
+#START OF SUMMIT_XL_SIM_DOCKERFILE
 FROM osrf/ros:melodic-desktop-full
 MAINTAINER Guillem Gari <ggari@robontik.es>
 
@@ -38,7 +37,7 @@ RUN apt-get update \
 	&& apt-get autoremove -q -y \
 	&& rm -rf /var/lib/apt/lists/*
 
-COPY docker/ros-requirements.txt /tmp
+COPY ros-requirements.txt /tmp
 
 RUN apt-get update \
 	&& apt-get install -q -y \
@@ -48,9 +47,6 @@ RUN apt-get update \
 	&& apt-get autoremove -q -y \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& rm /tmp/ros-requirements.txt
-
-
-COPY docker/ros_entrypoint.sh /
 
 USER $user_name
 
@@ -127,7 +123,7 @@ ENV ROS_BU_LAUNCH "summit_xl_complete.launch"
 ENV CATKIN_WS $ck_dir
 ENV RBK_CATKIN_PATH $ck_dir
 
-# END OF SUMMIT_XL_SIM DOCKERFILE
+#END OF SUMMIT_XL_SIM DOCKERFILE
 
 #Install RAFCON dependencies and nano
 USER 0
