@@ -17,7 +17,7 @@ git clone https://github.com/Omimacgithub/summit_xl_rosmc.git
 catkin build rosmc
 ~~~
 
-To start rosmc on simulation (by default this .sh is set for outdoor missions, see below how to set up outdoors localization before launching this file):
+To start rosmc on simulation (by default this .sh is set for outdoor missions, see on **Using outdoors localization** section how to set up outdoors/indoors localization before launching this file):
 ~~~shell
 chmod +x simlaunch.sh
 ./simlaunch.sh
@@ -64,7 +64,9 @@ nano ~/catkin_ws/src/summit_xl_rosmc/simlaunch.sh
 - Comment the launch line for indoors
 - Uncomment the launch line for outdoors
 
-Comment the following line on **robot_localization_complete.launch**:
+If you want to use indoor localization, revert the previous process.
+
+Comment the following **include tag** on **robot_localization_complete.launch**:
 ~~~shell
 nano ~/catkin_ws/src/summit_xl_common/summit_xl_localization/launch/robot_localization_complete.launch
 ~~~
