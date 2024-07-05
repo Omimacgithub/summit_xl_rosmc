@@ -64,10 +64,10 @@ nano ~/catkin_ws/src/summit_xl_rosmc/simlaunch.sh
 - Comment the launch line for indoors
 - Uncomment the launch line for outdoors
 
-If you want to use indoor localization, revert the previous process.
-
 Comment the following **include tag** on **robot_localization_complete.launch**:
 ~~~shell
 nano ~/catkin_ws/src/summit_xl_common/summit_xl_localization/launch/robot_localization_complete.launch
 ~~~
 <img width="554" alt="imagen" src="https://github.com/Omimacgithub/summit_xl_rosmc/assets/90336442/3a639d80-1148-46a2-8f38-cefb8fbdaea1">
+
+If you want to use indoor localization, **revert the previous process** (except for the last step).
