@@ -1,6 +1,6 @@
-# summit_xl_rosmc
+# SUMMIT_XL_ROSMC - GUI tool for performing missions on Robotnik Summit-XL mobile robot
 
-This repo contains a demo of the Robotnik Summit-XL working with a high-level mission designing and monitoring tool called rosmc.
+This repo contains the code and several missions performed on Robotnik Summit-XL mobile robot working with **ROSMC**, a high-level mission designing and monitoring tool.
 
 ![GIF](https://github.com/Omimacgithub/summit_xl_rosmc/assets/90336442/54ee2867-8713-49b1-b092-06775b29f3a1)
 
